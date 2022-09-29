@@ -1,0 +1,23 @@
+.img-des{
+    height: 50px;
+    
+}
+
+.img-container{
+    display: flex;
+    align-items: center;
+}
+
+.card-container{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+
+.div-container{
+    padding-top: 50px;
+    padding-left: 80px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
