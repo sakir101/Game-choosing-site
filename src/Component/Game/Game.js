@@ -11,8 +11,11 @@ const Game = (props) => {
           <strong>Age: {age}</strong>
           <br />
           <strong>Time: {time}</strong>
-          <br />
-          <button>Add to cart</button>
+          
+          <div className='btn-div'>
+          <button className='btn'>Add to cart</button>
+          </div>
+          
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Game from '../Game/Game';
 import logo from '../../real.png'
+import myself from '../../Sakir.jpg'
 import './Games.css'
 const Games = () => {
     const [games, setGames] = useState([]);
@@ -24,9 +25,36 @@ const Games = () => {
                 </div>
             </div>
 
-            <div>
-
+            <div className='intro-container'>
+                    <div className='intro'>
+                        <div><img src={myself} alt="" className='myself-img'/></div>
+                        <div>
+                            <span>Sakir Hossain Faruque</span>
+                            <br />
+                            <span>Dhaka, Bangladesh</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                           <h4>67</h4>
+                           <span>kg</span>
+                           <br />
+                           <span>Weight</span>
+                        </div>
+                        <div>
+                            <h4>5.11</h4>
+                            <br />
+                            <span>Height</span>
+                        </div>
+                        <div>
+                            <h4>23</h4>
+                            <span>years</span>
+                            <br />
+                            <span>Age</span>
+                        </div>
+                    </div>
             </div>
+
         </div>
     );
 };
