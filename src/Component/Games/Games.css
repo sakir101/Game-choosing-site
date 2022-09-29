@@ -38,6 +38,7 @@
 .intro-container{
     padding-top: 10px;
     padding-left: 50px;
+    
 }
 
 .about-me{
@@ -107,4 +108,52 @@
     padding: 20px;
     border: none;
     border-radius: 15px;
+}
+
+@media only screen and (max-width:668px) {
+    .card-container{
+    
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+    }
+
+    .div-container{
+        padding-top: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 50px;
+    }
+
+    .intro-container{
+        padding-top: 0px;
+        padding-left: 0px;
+        order: 1;
+    }
+
+    .card-container1{
+        order: 2;
+    }
+
+    .detail{
+        background-color: aliceblue;
+        padding: 15px 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+     }
+    
+     .time{
+        margin-right: 30px;
+        font-weight: bold;
+    }
+
+    .break p{
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 10px;
+    }
+
 }

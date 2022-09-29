@@ -29,3 +29,22 @@
 .btn:hover{
     background-color: orange;
 }
+
+@media only screen and (max-width:668px){
+    .card{
+        background-color: beige;
+        padding: 10px;
+        border: 2px solid lightgray;
+        border-radius: 10px;
+    }
+
+    .btn{
+        width: 200px;
+        height: 30px;
+        background-color: lightblue;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    
+}

@@ -3,16 +3,27 @@ import Game from '../Game/Game';
 import logo from '../../real.png'
 import myself from '../../Sakir.jpg'
 import './Games.css'
+import {LocalDb, getStoredValue} from '../LcalDb/LocalDb'
 
 let total =0;
 const Games = () => {
     const [games, setGames] = useState([]);
     const [totals,setTotal] = useState([]);
+    const [breaks, setBreak] = useState([]);
+
     useEffect(() => {
         fetch('game.json')
             .then(res => res.json())
             .then(data => setGames(data))
     }, [])
+
+    useEffect(()=>{
+        let time = getStoredValue();
+        let times = [];
+        times.push(time)
+        console.log(time)
+        setBreak(times);
+    },[breaks])
     
     const addToCart = (game) => {
         const timeTaken = parseInt(game.time)
@@ -21,13 +32,20 @@ const Games = () => {
        
     }
 
-    const breakTime = () =>{
+    const breakTime = (value) =>{
+        LocalDb(value);
+        setBreak(value);
+        
+        
+    }
 
+    const showToast = () =>{
+        alert('You are Done!!! Congratulations')
     }
     
     return (
         <div className='div-container'>
-            <div >
+            <div className='cart_container1'>
                 <div className='img-container'>
                     <img src={logo} alt="" className='img-des' />
                     <h3>Games-World</h3>
@@ -71,11 +89,11 @@ const Games = () => {
                 <div>
                     <h3>Add a Break</h3>
                     <div className='break'>
-                        <p >10s</p>
-                        <p>20s</p>
-                        <p>30s</p>
-                        <p>40s</p>
-                        <p>50s</p>
+                        <p onClick={() => breakTime(10)}>10s</p>
+                        <p onClick={() => breakTime(20)}>20s</p>
+                        <p onClick={() => breakTime(30)}>30s</p>
+                        <p onClick={() => breakTime(40)}>40s</p>
+                        <p onClick={() => breakTime(50)}>50s</p>
                     </div>
                 </div>
                 <div>
@@ -87,11 +105,11 @@ const Games = () => {
                     </div>
                     <div className='detail'>
                         <span className='time'>Break Time</span>
-                        <span>0</span>
+                        <span>{breaks}</span>
                         <span>seconds</span>
                     </div>
                 </div>
-                <div className='cmplt-div'>
+                <div className='cmplt-div' onClick={showToast}>
                     <button className='btn-cmplt'>Game Completed</button>
                 </div>
             </div>
