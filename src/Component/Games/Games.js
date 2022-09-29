@@ -34,23 +34,46 @@ const Games = () => {
                             <span>Dhaka, Bangladesh</span>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                           <h4>67</h4>
+                    <div className='about-me'>
+                        <div className='about-div'>
+                           <span className='about-span'>67</span>
                            <span>kg</span>
                            <br />
                            <span>Weight</span>
                         </div>
-                        <div>
-                            <h4>5.11</h4>
+                        <div className='about-div'>
+                            <span className='about-span'>5.11</span>
                             <br />
                             <span>Height</span>
                         </div>
-                        <div>
-                            <h4>23</h4>
+                        <div className='about-div'>
+                            <span className='about-span'>23</span>
                             <span>years</span>
                             <br />
                             <span>Age</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Add a Break</h3>
+                        <div className='break'>
+                            <p>10s</p>
+                            <p>20s</p>
+                            <p>30s</p>
+                            <p>40s</p>
+                            <p>50s</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Game Details</h3>
+                        <div className='detail'>
+                            <span className='time'>Play Time</span>
+                            <span>0</span>
+                            <span>seconds</span>
+                        </div>
+                        <div className='detail'>
+                            <span className='time'>Break Time</span>
+                            <span>0</span>
+                            <span>seconds</span>
                         </div>
                     </div>
             </div>

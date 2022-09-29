@@ -18,6 +18,7 @@
 .div-container{
     padding-top: 50px;
     padding-left: 80px;
+    padding-right: 80px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 50px;
@@ -39,3 +40,54 @@
     padding-left: 50px;
 }
 
+.about-me{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.about-div{
+    margin-right: 15px;
+}
+
+.about-span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.break{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.break p{
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+}
+
+.break p:hover{
+    background-color: blueviolet;
+    color: white;
+}
+
+.detail{
+   background-color: aliceblue;
+   padding: 30px 15px;
+   border-radius: 10px;
+   margin-bottom: 10px;
+}
+
+.time{
+    margin-right: 80px;
+    font-weight: bold;
+}
