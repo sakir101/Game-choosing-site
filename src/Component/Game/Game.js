@@ -2,6 +2,8 @@ import React from 'react';
 import './Game.css'
 
 const Game = (props) => {
+    
+    const {handleCart} = props
     const {name, img, time, age, desc, id} = props.game
     return (
         <div className='card'>
@@ -10,10 +12,10 @@ const Game = (props) => {
           <p>{desc}</p>
           <strong>Age: {age}</strong>
           <br />
-          <strong>Time: {time}</strong>
+          <strong>Time: {time} Min</strong>
           
           <div className='btn-div'>
-          <button className='btn'>Add to cart</button>
+          <button className='btn' onClick={() => handleCart(props.game)}>Add to cart</button>
           </div>
           
         </div>
