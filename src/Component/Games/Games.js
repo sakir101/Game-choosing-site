@@ -76,8 +76,11 @@ const Games = () => {
                             <span>seconds</span>
                         </div>
                     </div>
+                    <div className='cmplt-div'>
+                        <button className='btn-cmplt'>Game Completed</button>
+                    </div>
             </div>
-
+            
         </div>
     );
 };
