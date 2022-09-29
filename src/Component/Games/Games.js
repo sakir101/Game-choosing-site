@@ -4,6 +4,8 @@ import logo from '../../real.png'
 import myself from '../../Sakir.jpg'
 import './Games.css'
 import { LocalDb, getStoredValue } from '../LcalDb/LocalDb'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 let total = 0;
 const Games = () => {
@@ -19,10 +21,10 @@ const Games = () => {
 
     useEffect(() => {
         let time = getStoredValue();
-        let times = [];
-        times.push(time)
+        // let times = [];
+        // times.push(time)
         console.log(time)
-        setBreak(times);
+        setBreak(time);
     }, [breaks])
 
     const addToCart = (game) => {
@@ -40,7 +42,7 @@ const Games = () => {
     }
 
     const showToast = () => {
-        alert('You are Done!!! Congratulations')
+        toast("Congratulation!! You are done");
     }
 
     return (
@@ -112,6 +114,7 @@ const Games = () => {
                     </div>
                     <div className='cmplt-div' onClick={showToast}>
                         <button className='btn-cmplt'>Game Completed</button>
+                        <ToastContainer />
                     </div>
                 </div>
             </div>

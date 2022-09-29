@@ -12,7 +12,7 @@ const Game = (props) => {
           <p>{desc}</p>
           <strong>Age: {age}</strong>
           <br />
-          <strong>Time: {time} Min</strong>
+          <strong className='card-strong'>Time: {time} Min</strong>
           
           <div className='btn-div'>
           <button className='btn' onClick={() => handleCart(props.game)}>Add to cart</button>

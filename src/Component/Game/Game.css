@@ -5,9 +5,12 @@
 .card{
     background-color: beige;
     padding: 15px;
+    padding-bottom: 60px;
     border: 2px solid lightgray;
     border-radius: 10px;
+    position: relative;
 }
+
 
 .btn-div{
     display: flex;
@@ -19,11 +22,14 @@
 
 .btn{
     width: 100%;
-    height: 30px;
+    height: 50px;
     background-color: lightblue;
     border: none;
     font-weight: bold;
     border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -37,11 +43,12 @@
         padding: 10px;
         border: 2px solid lightgray;
         border-radius: 10px;
+        padding-bottom: 60px;
     }
 
     .btn{
-        width: 200px;
-        height: 30px;
+        width: 20em;
+        height: 50px;
         background-color: lightblue;
         border: none;
         font-weight: bold;

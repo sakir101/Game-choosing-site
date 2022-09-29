@@ -1,13 +1,14 @@
 import React from 'react';
 
 const LocalDb = (value) => {
-    console.log(value)
+    
     localStorage.setItem("Break-Time", JSON.stringify(value))
 };
 
 const getStoredValue = () =>{
-    let time = localStorage.getItem('Break-time');
-    time = JSON.parse(time);
+    let time = localStorage.getItem("Break-Time");
+    time = JSON.parse(time)
+    console.log(time)
     return time;
 }
 
